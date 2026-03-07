@@ -1,10 +1,10 @@
-# :dog: Billhound (CLI) 
+# :dog: | Billhound (CLI) 
 
-## :beginner: Overview
+## :beginner: | Overview
 Billhound (CLI) is a command-line interface (CLI) application aimed at fostering political 
 consciousness.
 ### Features
 
-## :beginner: Instructions
+## :beginner: | Instructions
 
-## :beginner: Structure
+## :beginner: | Structure
