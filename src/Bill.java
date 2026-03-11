@@ -2,10 +2,16 @@ import java.net.URI;
 import java.time.LocalDate;
 import java.time.Month;
 
+/**
+ * Incorporate description herein.
+ * <p>
+ * @author Alejandro Gachupin
+ * @contact gachae25@wfu.edu
+ * @contact cyber@gachupin.io
+ * <p>
+ * @since 2025-03-11
+ */
 public class Bill {
-    // Incorporate description herein:
-    private static final String ANSI_BOLD = "\\u001B[1m";
-
     // Incorporate description herein:
     private static final LocalDate MINIMUM_DATE = LocalDate.of(1789, Month.JUNE, 1);
 
@@ -73,7 +79,12 @@ public class Bill {
     @Override
     public String toString() {
         return """
-               """.formatted();
+               %s
+               %s
+               %4s %s
+               """.formatted(Ansi.DIM + number + Ansi.RESET,
+                Ansi.BOLD + Ansi.UNDERLINE + title + Ansi.RESET,
+                "", description);
     }
 
     /**
