@@ -3,15 +3,8 @@ import java.time.LocalDate;
 import java.time.Month;
 
 public class Bill {
-    public enum Status {
-        UNKNOWN, // Incorporate description herein.
-        INTRODUCED, // Incorporate description herein.
-        ENGROSSED, // Incorporate description herein.
-        ENROLLED, // Incorporate description herein.
-        PASSED, // Incorporate description herein.
-        VETOED, // Incorporate description herein.
-        SCHEDULED // Incorporate description herein.
-    }
+    // Incorporate description herein:
+    private static final String ANSI_BOLD = "\\u001B[1m";
 
     // Incorporate description herein:
     private static final LocalDate MINIMUM_DATE = LocalDate.of(1789, Month.JUNE, 1);
@@ -38,11 +31,14 @@ public class Bill {
      * @param number Incorporate description herein.
      * @param title Incorporate description herein.
      * @param description Incorporate description herein.
+     * <p>
      * @param id Incorporate description herein.
      * @param sessionId Incorporate description herein.
      * @param committeeId Incorporate description herein.
+     * <p>
      * @param congressUrl Incorporate description herein.
      * @param legiscanUrl Incorporate description herein.
+     *<p>
      * @param lastAction Incorporate description herein.
      * @param lastActionDate Incorporate description herein.
      * @param status Incorporate description herein.
@@ -52,7 +48,32 @@ public class Bill {
                 int id, int sessionId, int committeeId,
                 URI congressUrl, URI legiscanUrl,
                 String lastAction, LocalDate lastActionDate, Status status, LocalDate statusDate) {
-        //...
+        this.number = number;
+        this.title = title;
+        this.description = description;
+
+        this.id = id;
+        this.sessionId = sessionId;
+        this.committeeId = committeeId;
+
+        this.congressUrl = congressUrl;
+        this.legiscanUrl = legiscanUrl;
+
+        this.lastAction = lastAction;
+        this.lastActionDate = lastActionDate;
+        this.status = status;
+        this.statusDate = statusDate;
+    }
+
+    /**
+     * Incorporate description herein.
+     * <p>
+     * @return Incorporate description herein.
+     */
+    @Override
+    public String toString() {
+        return """
+               """.formatted();
     }
 
     /**
